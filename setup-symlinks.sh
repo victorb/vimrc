@@ -8,4 +8,4 @@ echo "## Setting up symlinks"
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/vim ~/.vim
 
-echo "## Installation done... Enjoy"
+echo "## Installation done... Enjok"
