@@ -1,9 +1,9 @@
 syntax enable
-if has('gui_running')
-    set background=dark
-else
-    set background=light
-endif
+"if has('gui_running')
+   set background=dark
+"else
+"    set background=light
+"endif
 
 " using Source Code Pro
 set anti enc=utf-8
@@ -11,7 +11,7 @@ set guifont=Source\ Code\ Pro\ 10
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme base16-default
-colorscheme base16-flat
+colorscheme base16-default
 
 set nocompatible
 filetype indent plugin on
@@ -129,7 +129,7 @@ Plugin 'Lokaltog/vim-easymotion'
 " Plugin 'tpope/vim-fireplace'
 " Plugin 'tpope/vim-leiningen'
 " Typescript
-Plugin 'leafgarland/typescript-vim'
+"Plugin 'leafgarland/typescript-vim'
 " Vimproc
 " Plugin 'Shougo/vimproc.vim'
 " Plugin 'Shougo/vimshell.vim'
@@ -139,7 +139,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " Scala....
-Plugin 'derekwyatt/vim-scala'
+"Plugin 'derekwyatt/vim-scala'
 
 " LESS Support
 Plugin 'groenewege/vim-less'
@@ -288,6 +288,14 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
+" Vim-go configuration
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
 " " Emmet to ctrl+e
 let g:user_emmet_leader_key='<C-E>'
 let g:user_emmet_mode='a'
@@ -303,6 +311,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 
 autocmd FileType md set shiftwidth=4|set expandtab
+
+autocmd! bufwritepost .vimrc source %
 
 " Enable autocomplete
 let g:neocomplcache_enable_at_startup = 1
